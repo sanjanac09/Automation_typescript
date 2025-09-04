@@ -1,0 +1,35 @@
+{
+  "name": "bahah_admin",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "test:feature": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts --require tests/support/**/*.ts",
+  "test:admin": "npm run test:feature -- tests/features/admin.feature",
+   "test:hairstylist:edit": "npm run test:feature -- --tags @Edit tests/features/hairstylist.feature",
+   "test:hairstylist:add": "npm run test:feature -- --tags @add tests/features/hairstylist.feature",
+   "test:hairstylist:validation": "npm run test:feature -- --tags @validation tests/features/hairstylist.feature",
+   "test:hairstylist:submit": "npm run test:feature -- --tags @submit tests/features/hairstylist.feature"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "chai": "^6.0.1",
+    "eslint": "^9.34.0",
+    "playwright": "^1.55.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.0",
+    "undici-types": "^7.10.0"
+  },
+  "description": ""
+}

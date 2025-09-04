@@ -1,0 +1,201 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "hairstylist;edit-the-profile-and-add-valid-data",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Edit the profile and add valid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 499632764
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5982194322
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I navigate to the  \"Hairstylist\" tab",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 509860246
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I open the menu and select \"Edit\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1779135088
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I update the \"First Name\" and \"Last Name\" field with a new value",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4127249917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I select a different option from the \"Gender\" dropdown",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1003528813
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I update the \"Date of Birth\" field",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 477568339
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I select a status from the \"Status\" dropdown",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1464084333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I update the \"About You\" section with new text",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3672824855
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I click on the \"Save Changes\" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 575412649
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should see a confirmation popup",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7225691
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I confirm by clicking \"Yes\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 567738561
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "I should see a success message \"User updated successfully\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1853697969
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 136242999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Edit",
+            "line": 26
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "hairstylist",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Hairstylist",
+    "tags": [],
+    "uri": "tests/features/hairstylist.feature"
+  }
+]
