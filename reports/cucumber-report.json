@@ -4,17 +4,224 @@
     "elements": [
       {
         "description": "",
-        "id": "hairstylist;edit-the-profile-and-add-valid-data",
+        "id": "admin;add-new-admin",
         "keyword": "Scenario",
-        "line": 27,
-        "name": "Edit the profile and add valid data",
+        "line": 7,
+        "name": "Add new admin",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 499632764
+              "duration": 627776355
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am already logged in and on the dashboard page of bahah",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6084163475
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click on the \"Admin users\" section",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 539487930
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the \"Add New user\" button",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 726255473
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter the first name",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 429772139
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I enter the last name",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 438282618
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I enter the email address",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 433108754
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I enter the contact number",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 431618388
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click \"create new admin\" button",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 465391103
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the toast message and new user added to the admit list",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13917627713
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I should see the status as \"Active\"",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14095005
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the profile icon",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 494609921
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "User click logout button",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 494956747
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should be navigated to login page",
+            "match": {
+              "location": "tests/step_definitions/adminSteps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4445245
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178357845
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Admin",
+    "tags": [],
+    "uri": "tests/features/admin.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "hairstylist;add-new-hairstylist",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Add new Hairstylist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 585452269
             }
           },
           {
@@ -27,7 +234,292 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5982194322
+              "duration": 6063752467
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I navigate to the  \"Hairstylist\" tab",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557260492
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User click on the \"Add New user\" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 714133694
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter First Name and \"Last Name\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 873363374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter email address",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 435102563
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I enter contact number",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 441300755
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the \"Create New User \" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 476821399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see a sucess message as \"Admin created successfully\".",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2867039546
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on the profile",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 514476858
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click logout button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 491841711
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should navigate to login page",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2731099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169519498
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add",
+            "line": 5
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "hairstylist;edit-the-profile-of-hairstylist",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Edit the profile of Hairstylist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 536406779
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6326535973
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I navigate to the  \"Hairstylist\" tab",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 562064250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I open the menu and select \"Edit\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1815943185
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I clear all required fields",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5175034142
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I click on the save changes button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 630555400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see  a error messages",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32525055
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 141405019
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validation",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "hairstylist;edit-the-profile-and-add-valid-data",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Edit the profile and add valid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 570943317
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6633188867
             }
           },
           {
@@ -40,7 +532,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 509860246
+              "duration": 517287305
             }
           },
           {
@@ -49,11 +541,11 @@
             "line": 29,
             "name": "I open the menu and select \"Edit\"",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:17"
+              "location": "tests/step_definitions/hairstylistSteps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1779135088
+              "duration": 1841924100
             }
           },
           {
@@ -62,11 +554,11 @@
             "line": 30,
             "name": "I update the \"First Name\" and \"Last Name\" field with a new value",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:38"
+              "location": "tests/step_definitions/hairstylistSteps.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 4127249917
+              "duration": 4447178302
             }
           },
           {
@@ -75,11 +567,11 @@
             "line": 31,
             "name": "I select a different option from the \"Gender\" dropdown",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:42"
+              "location": "tests/step_definitions/hairstylistSteps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 1003528813
+              "duration": 1043013888
             }
           },
           {
@@ -88,11 +580,11 @@
             "line": 32,
             "name": "I update the \"Date of Birth\" field",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:46"
+              "location": "tests/step_definitions/hairstylistSteps.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 477568339
+              "duration": 470464331
             }
           },
           {
@@ -101,11 +593,11 @@
             "line": 33,
             "name": "I select a status from the \"Status\" dropdown",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:120"
+              "location": "tests/step_definitions/hairstylistSteps.ts:123"
             },
             "result": {
               "status": "passed",
-              "duration": 1464084333
+              "duration": 1461700424
             }
           },
           {
@@ -114,11 +606,11 @@
             "line": 34,
             "name": "I update the \"About You\" section with new text",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:50"
+              "location": "tests/step_definitions/hairstylistSteps.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 3672824855
+              "duration": 3930935279
             }
           },
           {
@@ -127,11 +619,11 @@
             "line": 35,
             "name": "I click on the \"Save Changes\" button",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:54"
+              "location": "tests/step_definitions/hairstylistSteps.ts:56"
             },
             "result": {
               "status": "passed",
-              "duration": 575412649
+              "duration": 633267017
             }
           },
           {
@@ -140,11 +632,11 @@
             "line": 36,
             "name": "I should see a confirmation popup",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:58"
+              "location": "tests/step_definitions/hairstylistSteps.ts:60"
             },
             "result": {
               "status": "passed",
-              "duration": 7225691
+              "duration": 8723749
             }
           },
           {
@@ -153,11 +645,11 @@
             "line": 37,
             "name": "I confirm by clicking \"Yes\"",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:62"
+              "location": "tests/step_definitions/hairstylistSteps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 567738561
+              "duration": 586326834
             }
           },
           {
@@ -166,11 +658,11 @@
             "line": 38,
             "name": "I should see a success message \"User updated successfully\"",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:66"
+              "location": "tests/step_definitions/hairstylistSteps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 1853697969
+              "duration": 1812975347
             }
           },
           {
@@ -178,7 +670,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 136242999
+              "duration": 134434913
             }
           }
         ],
@@ -186,6 +678,103 @@
           {
             "name": "@Edit",
             "line": 26
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "hairstylist;submit-with-all-fields-empty",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "submit with all fields empty",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 580229282
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6385747781
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "I navigate to the  \"Hairstylist\" tab",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 502684748
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "User click on the \"Add New user\" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 707770575
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I click on the \"Create New User \" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 477179652
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "I should see error messages",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:117"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23773719
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 176722615
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@submit",
+            "line": 40
           }
         ],
         "type": "scenario"
@@ -197,5 +786,572 @@
     "name": "Hairstylist",
     "tags": [],
     "uri": "tests/features/hairstylist.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;valid-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 578344650
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2789752327
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User enters valid credentials",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2258909629
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should see the dashboard",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1877238744
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164008037
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@valid_login",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;invalid-login",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Invalid Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 578966859
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2856193480
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I enter my invalid email",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1288205305
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I enter my password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 438669365
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 479159600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the error message",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8258112
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227502483
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid_email",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;empty-email-field",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "empty email field",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 548006888
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4771965768
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I leave email field empty",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1271222553
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I enter my password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 451550029
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 476771842
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see the error message for email",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6454218
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122121268
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@empty_email",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;empty-password-field",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "empty password field",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 469841518
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2756170423
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I enter my email",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1286364383
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I leave password field empty",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 427009838
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 486514217
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I should see the error message for password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7128616
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 131914944
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@empty_password",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;both-email-and-password-empty",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Both email and password empty",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 526676111
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2657954324
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I leave email field empty",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1236006615
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I leave password field empty",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 428716516
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 480367580
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should see error messages for email and password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12198516
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119667704
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@both_empty",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;wrong-password",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "Wrong password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 514794722
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "User is on the login page",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2680298741
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I enter my email",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1255395518
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I enter wrong password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 440415366
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 479419014
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "I should see the error message for wrong password",
+            "match": {
+              "location": "tests/step_definitions/loginSteps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 870016223
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 135713212
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wrong_password",
+            "line": 41
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "tags": [],
+    "uri": "tests/features/login.feature"
   }
 ]

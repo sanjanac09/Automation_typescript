@@ -5,7 +5,7 @@ Feature:Hairstylist
     @add
     Scenario: Add new Hairstylist
     When I navigate to the  "Hairstylist" tab
-    And I click on the "Add New user" button
+    And User click on the "Add New user" button
     And I enter First Name and "Last Name"
     And I enter email address 
     And I enter contact number 
@@ -40,6 +40,6 @@ Feature:Hairstylist
    @submit
    Scenario: submit with all fields empty
    When I navigate to the  "Hairstylist" tab
-   And I click on the "Add New user" button
+   And User click on the "Add New user" button
    And I click on the "Create New User " button
    Then I should see error messages 

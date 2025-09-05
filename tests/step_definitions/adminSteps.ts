@@ -9,7 +9,7 @@ Given('I am already logged in and on the dashboard page of bahah', { timeout: 10
   await adminPage.gotoLoginPage();             // Go to login page
   await adminPage.email('gorakh@ebpearls.com.au');
   await adminPage.enterPassword('Password@1');
-  await adminPage.SignInNow(); 
+  await adminPage.SignInNow();                                                                                                                                                                                             
   await adminPage.dashboard();                 // Wait for dashboard
 });
 
@@ -54,15 +54,15 @@ Then('I should see the status as "Active"', async function () {
   await adminPage.VerifyStatus(this.randomEmail, 'Active');  // Verify the status using stored email
 });
 
-When('I click on the profile', async function () {
+When('I click on the profile icon', async function () {
   await adminPage.clickProfile();
 });
 
-When('I click logout button', async function () {
+When('User click logout button', async function () {
   await adminPage.clickLogout();
 });
 
-Then('I should navigate to login page', async function () {
+Then('I should be navigated to login page', async function () {
   await adminPage.VerifyLogout();    // Only check logout here
 });
 

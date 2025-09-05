@@ -2,24 +2,33 @@
   "name": "bahah_admin",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "test:feature": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts --require tests/support/**/*.ts",
-  "test:admin": "npm run test:feature -- tests/features/admin.feature",
-   "test:hairstylist:edit": "npm run test:feature -- --tags @Edit tests/features/hairstylist.feature",
-   "test:hairstylist:add": "npm run test:feature -- --tags @add tests/features/hairstylist.feature",
-   "test:hairstylist:validation": "npm run test:feature -- --tags @validation tests/features/hairstylist.feature",
-   "test:hairstylist:submit": "npm run test:feature -- --tags @submit tests/features/hairstylist.feature"
-},
-
+  "scripts": {
+    "test:feature": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts --require tests/support/**/*.ts",
+    "test:admin": "npm run test:feature -- tests/features/admin.feature",
+    "test:hairstylist:edit": "npm run test:feature -- --tags @Edit tests/features/hairstylist.feature",
+    "test:hairstylist:add": "npm run test:feature -- --tags @add tests/features/hairstylist.feature",
+    "test:hairstylist:validation": "npm run test:feature -- --tags @validation tests/features/hairstylist.feature",
+    "test:hairstylist:submit": "npm run test:feature -- --tags @submit tests/features/hairstylist.feature",
+    "test:login:valid": "npm run test:feature -- --tags @valid_login tests/features/login.feature",
+    "test:login": "npm run test:feature -- tests/features/login.feature",
+    "test:login:invalid": "npm run test:feature -- --tags @invalid_email tests/features/login.feature",
+    "test:login:empty_email": "npm run test:feature -- --tags @empty_email tests/features/login.feature",
+    "test:login:empty_password": "npm run test:feature -- --tags @empty_password tests/features/login.feature",
+    "test:login:both_empty": "npm run test:feature -- --tags @both_empty tests/features/login.feature",
+    "test:login:wrong_password": "npm run test:feature -- --tags @wrong_password tests/features/login.feature"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^12.2.0",
+    "@faker-js/faker": "^10.0.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.0",
     "chai": "^6.0.1",
+    "cucumber-html-reporter": "^7.2.0",
     "eslint": "^9.34.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
     "playwright": "^1.55.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"

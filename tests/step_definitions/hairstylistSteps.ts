@@ -14,13 +14,14 @@ When('I navigate to the  "Hairstylist" tab',async function(){
   await hairstylist.gotoHairstylistSection();
 });
 
+//check for validations while editing hairstylist
 When ('I open the menu and select "Edit"',async function()
 {
   await hairstylist.menuIcon();
   await hairstylist.editbutton();
 })
 
- When('I clear all required fields',async function()
+ When('I clear all required fields',{ timeout: 6000 },async function()
 {
   await hairstylist.clearfields();
 })
@@ -35,6 +36,7 @@ Then('I should see  a error messages',async function()
   await hairstylist.errorMessages();
 })
 
+//edit hairstylist
 When('I update the "First Name" and "Last Name" field with a new value',async function()
 {
   await hairstylist.enterInfo('mario','smith');
@@ -67,8 +69,9 @@ Then('I should see a success message "User updated successfully"',async function
 {
  await hairstylist.sucessMessage();
 })
-//add new user
-When ('I click on the "Add New user" button', async function()
+
+//Add new user
+When ('User click on the "Add New user" button', async function()
 {
   await hairstylist.clickAddNewButton();
 })

@@ -9,7 +9,8 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": ["node", "playwright"]
+    "types": ["node"],
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
   "include": ["tests/**/*.ts"]
 }
