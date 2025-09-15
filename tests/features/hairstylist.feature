@@ -30,6 +30,8 @@ Feature:Hairstylist
     And I update the "First Name" and "Last Name" field with a new value
     And I select a different option from the "Gender" dropdown
     And I update the "Date of Birth" field
+    And I select a "Service Provide Direction" from the dropdown
+    And I select the street address from the location suggestions
     And I select a status from the "Status" dropdown
     And I update the "About You" section with new text
     And I click on the "Save Changes" button

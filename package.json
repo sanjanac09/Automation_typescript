@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test:feature": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts --require tests/support/**/*.ts",
-    "test:admin": "npm run test:feature -- tests/features/admin.feature",
+    "test:admin:": "npm run test:feature -- tests/features/admin.feature",
     "test:hairstylist:edit": "npm run test:feature -- --tags @Edit tests/features/hairstylist.feature",
     "test:hairstylist:add": "npm run test:feature -- --tags @add tests/features/hairstylist.feature",
     "test:hairstylist:validation": "npm run test:feature -- --tags @validation tests/features/hairstylist.feature",
@@ -15,7 +15,14 @@
     "test:login:empty_email": "npm run test:feature -- --tags @empty_email tests/features/login.feature",
     "test:login:empty_password": "npm run test:feature -- --tags @empty_password tests/features/login.feature",
     "test:login:both_empty": "npm run test:feature -- --tags @both_empty tests/features/login.feature",
-    "test:login:wrong_password": "npm run test:feature -- --tags @wrong_password tests/features/login.feature"
+    "test:login:wrong_password": "npm run test:feature -- --tags @wrong_password tests/features/login.feature",
+    "test:test": "npm run test:feature -- tests/features/test.feature",
+    "report": "npx multiple-cucumber-html-reporter --reportName 'Bahah Admin Report' --jsonDir ./reports/json/ --reportPath ./reports/html/ --openReport",
+    "lint": "eslint . --ext .ts",
+    "test:admin:page": "npm run test:feature -- --tags @page tests/features/admin.feature",
+    "test:admin:add": "npm run test:feature -- --tags @addAdmin tests/features/admin.feature",
+    "generate-report": "ts-node tests/support/generate-report.ts",
+    "test:all": "npm run test:feature && npm run generate-report"
   },
   "keywords": [],
   "author": "",

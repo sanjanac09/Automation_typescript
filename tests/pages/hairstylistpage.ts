@@ -46,7 +46,8 @@ export class hairstylistpage
     readonly emailAddressError: ReturnType<Page['locator']>;
     readonly contactError: ReturnType<Page['locator']>;
     readonly profile: ReturnType<Page['locator']>;
-    readonly logoutButton: ReturnType<Page['locator']>;                    
+    readonly logoutButton: ReturnType<Page['locator']>;       
+    readonly street: ReturnType<Page['locator']>;             
 
 async delay(timeInMs: number) {
     return new Promise(resolve => setTimeout(resolve, timeInMs));
@@ -111,10 +112,14 @@ constructor (page:Page)
      this.emailAddressError = page.locator('text=Email is a required field');
      this.contactError = page.locator('text=Phone number is required');
   
+    //for location
+    this.street = page.locator('input[placeholder="Enter a location"]');
+
     //for logout page
      this.profile= page.locator('[data-testid="PersonIcon"]');
      this.logoutButton = page.locator('//p[normalize-space()=\'Logout\']');
-  }
+  
+    }
     //navigates to the following url
     async gotoLoginPage()
     {
@@ -217,6 +222,39 @@ constructor (page:Page)
         throw new Error(`Gender option "${gender}" not available`);
     }
     await this.delay(30);
+    }
+
+    //select service provide direction
+    async selectServiceDirection(option: 'ComeToMe' | 'GoToThem' | 'Both') {
+      const locator = this.page.locator(`li[data-value="${option}"]`);
+
+     await this.serviceDirectionDropdown.click(); // open dropdown
+     await locator.waitFor({ state: 'visible' }); // wait until the option is visible
+     await this.page.waitForTimeout(500);
+     await locator.click();                       // click on the option
+    }
+    
+   //select location 
+  // select location with autocomplete
+async enterLocation(location: string) {
+  // Clear the input
+  await this.street.fill(''); 
+
+  // Type the new address slowly
+  await this.street.type(location, { delay: 20 });
+
+  // Wait for the autocomplete dropdown to appear
+  const firstOption = this.page.locator('.pac-item').first();
+  await firstOption.waitFor({ state: 'visible', timeout: 5000 });
+
+  // Click the first suggestion
+  await firstOption.click();
+}
+
+
+    //select status
+    async selectStatus(option: 'active' | 'inactive' | 'verified' | 'email_verified') {
+      const locator = this.page.locator(`li[data-value="${option}"]`);
     }
     //add dateOfBirth
     async enterDateOfBirth(date:string)

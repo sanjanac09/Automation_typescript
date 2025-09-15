@@ -1,5 +1,9 @@
 import { expect, Page } from '@playwright/test';
+
 export class AdminPage{
+  static email(arg0: string) {
+    throw new Error("Method not implemented.");
+  }
    readonly page: Page; 
 
   readonly emailInput: ReturnType<Page['locator']>;
@@ -48,13 +52,13 @@ export class AdminPage{
     {
       await this.page.goto('https://stage-cms.bahah.com.au/login', { timeout: 100000 })
     }
-    //enter email in the email input field
+   
     async email(email: string)
     {
-      await this.emailInput.fill(email);
+      await this.emailInput.fill(email);   //enter email in the email input field
     }
-    //enter password in the password field
-    async enterPassword(password: string)
+   
+    async enterPassword(password: string)   //enter password in the password field
     {
       await this.password.fill(password)
     }

@@ -4,6 +4,8 @@
     "requireModule": ["ts-node/register"],
     "paths": ["tests/features/*.feature"],
     "publishQuiet": true,
-    "format": ["progress", "json:reports/cucumber-report.json"]
+    "format": [
+     "progress",
+     "json:reports/cucumber-report.json"]
   }
 }

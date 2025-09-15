@@ -1,11 +1,10 @@
-// tests/support/generate-report.ts
-import report from "multiple-cucumber-html-reporter";
+import { generate } from "multiple-cucumber-html-reporter";
 
-report.generate({
+generate({
   jsonDir: "reports",         // directory where cucumber JSON is stored
   reportPath: "reports/html", // output folder
   pageTitle: "Automation Test Report",
-  reportName: "Bahah Admin Automation Report",
+  reportName: "Bahah Automation Report",
   displayDuration: true,
   metadata: {
     browser: {

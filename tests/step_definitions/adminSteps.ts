@@ -6,11 +6,11 @@ let adminPage: AdminPage;
 
 Given('I am already logged in and on the dashboard page of bahah', { timeout: 100000 }, async function () {
   adminPage = new AdminPage(this.page);             // Pass page to AdminPage
-  await adminPage.gotoLoginPage();             // Go to login page
+  await adminPage.gotoLoginPage();                 // Go to login page
   await adminPage.email('gorakh@ebpearls.com.au');
   await adminPage.enterPassword('Password@1');
   await adminPage.SignInNow();                                                                                                                                                                                             
-  await adminPage.dashboard();                 // Wait for dashboard
+  await adminPage.dashboard();                   // Wait for dashboard
 });
 
 When('I click on the "Admin users" section', async function () {

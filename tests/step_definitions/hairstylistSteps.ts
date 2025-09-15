@@ -37,7 +37,7 @@ Then('I should see  a error messages',async function()
 })
 
 //edit hairstylist
-When('I update the "First Name" and "Last Name" field with a new value',async function()
+When('I update the "First Name" and "Last Name" field with a new value',{timeout:9000},async function()
 {
   await hairstylist.enterInfo('mario','smith');
 })
@@ -48,6 +48,14 @@ When('I select a different option from the "Gender" dropdown',async function()
 When('I update the "Date of Birth" field',async function()
 {
   await hairstylist.enterDateOfBirth('10/12/1996');
+})
+When('I select a "Service Provide Direction" from the dropdown',{ timeout: 20000 },async function()
+{
+  await hairstylist.selectServiceDirection('Both');
+})
+When('I select the street address from the location suggestions',{ timeout: 20000 },async function()
+{
+  await hairstylist.enterLocation('Melbourne, Victoria, Australia');
 })
  When('I update the "About You" section with new text',{ timeout: 20000 },async function()
 {
