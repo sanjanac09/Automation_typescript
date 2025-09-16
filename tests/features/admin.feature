@@ -34,3 +34,5 @@ When I change page size to 5
 Then I should see 5 rows in the table
 When I change page size to 15
 Then I should see 15 rows in the table  
+When I change page size to 10
+Then I should see 10 rows in the table

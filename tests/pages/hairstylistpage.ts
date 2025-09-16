@@ -226,16 +226,15 @@ constructor (page:Page)
 
     //select service provide direction
     async selectServiceDirection(option: 'ComeToMe' | 'GoToThem' | 'Both') {
-      const locator = this.page.locator(`li[data-value="${option}"]`);
+      const service = this.page.locator(`li[data-value="${option}"]`);
 
-     await this.serviceDirectionDropdown.click(); // open dropdown
-     await locator.waitFor({ state: 'visible' }); // wait until the option is visible
+     await this.serviceDirectionDropdown.click();  // open dropdown
+     await service.waitFor({ state: 'visible' });  // wait until the option is visible
      await this.page.waitForTimeout(500);
-     await locator.click();                       // click on the option
+     await service.click();                        // click on the option
     }
     
-   //select location 
-  // select location with autocomplete
+   // select location with autocomplete
 async enterLocation(location: string) {
   // Clear the input
   await this.street.fill(''); 
