@@ -1,11 +1,27 @@
 {
   "default": {
-    "require": ["tests/step_definitions/*.ts", "tests/support/*.ts"],
     "requireModule": ["ts-node/register"],
+    "require": [
+      "tests/support/world.ts",
+      "tests/support/hooks.ts",
+      "tests/step_definitions/*.ts"
+    ],
     "paths": ["tests/features/*.feature"],
     "publishQuiet": true,
     "format": [
-     "progress",
-     "json:reports/cucumber-report.json"]
+      "progress",
+      "json:reports/cucumber_report.browser.timestamp.json"
+    ],
+    "retry": 0,
+    "exit": true
+  },
+  "embeddings": [
+    {
+      "mime_type": "image/png",
+      "data": "./report/artifacts/screenshots/test-scenario.png"
+    }
+  ],
+  "worldParameters": {
+    "fixtures": "tests/fixtures/**/*.json"
   }
 }

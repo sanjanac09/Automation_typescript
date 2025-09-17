@@ -4,199 +4,212 @@
     "elements": [
       {
         "description": "",
-        "id": "admin;admin-page",
+        "id": "hairstylist;edit-the-profile-and-add-valid-data",
         "keyword": "Scenario",
-        "line": 22,
-        "name": "Admin page",
+        "line": 27,
+        "name": "Edit the profile and add valid data",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 761367036
+              "duration": 605173691
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "I am already logged in and on the dashboard page of bahah",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
             "match": {
-              "location": "tests/step_definitions/adminSteps.ts:7"
+              "location": "tests/step_definitions/hairstylistSteps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 5995795328
+              "duration": 8896344529
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 23,
-            "name": "I click on the Admin users menu item",
-            "match": {
-              "location": "tests/step_definitions/testSteps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 618225179
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
-            "name": "I should be navigated to the admin page",
-            "match": {
-              "location": "tests/step_definitions/testSteps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4527651
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 25,
-            "name": "I should see the title as \"Admin Users\"",
-            "match": {
-              "location": "tests/step_definitions/testSteps.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 377156831
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
-            "name": "I should see the \"Add New user\" button",
-            "match": {
-              "location": "tests/step_definitions/testSteps.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7737475
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 27,
-            "name": "I should see the search bar",
-            "match": {
-              "location": "tests/step_definitions/testSteps.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6431896
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "First Name",
-                      "Last Name",
-                      "Email",
-                      "Status"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "And ",
             "line": 28,
-            "name": "I should see the table with headers",
+            "name": "I navigate to the  \"Hairstylist\" tab",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:37"
+              "location": "tests/step_definitions/hairstylistSteps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 161880293
+              "duration": 532470790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I open the menu and select \"Edit\"",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1777769533
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I upload the profile picture",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3710651010
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 31,
-            "name": "The default page size should be 10",
+            "name": "I update the \"First Name\" and \"Last Name\" field with a new value",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:44"
+              "location": "tests/step_definitions/hairstylistSteps.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 21248370
+              "duration": 1933276577
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "And ",
             "line": 32,
-            "name": "I should see 10 rows in the table",
+            "name": "I select a different option from the \"Gender\" dropdown",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:66"
+              "location": "tests/step_definitions/hairstylistSteps.ts:51"
             },
             "result": {
               "status": "passed",
-              "duration": 4719095
+              "duration": 994849441
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 33,
-            "name": "I change page size to 5",
+            "name": "I update the \"Date of Birth\" field",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:62"
+              "location": "tests/step_definitions/hairstylistSteps.ts:55"
             },
             "result": {
               "status": "passed",
-              "duration": 1449845876
+              "duration": 454019874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I select a \"Service Provide Direction\" from the dropdown",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1410990014
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I select the street address from the location suggestions",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2191981148
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I select a status from the \"Status\" dropdown",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:138"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1424371164
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I update the \"About You\" section with new text",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3498401367
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click on the \"Save Changes\" button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 563065139
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 34,
-            "name": "I should see 5 rows in the table",
+            "line": 39,
+            "name": "I should see a confirmation popup",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:66"
+              "location": "tests/step_definitions/hairstylistSteps.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 4025830
+              "duration": 9200506
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 35,
-            "name": "I change page size to 15",
+            "line": 40,
+            "name": "I confirm by clicking \"Yes\"",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:62"
+              "location": "tests/step_definitions/hairstylistSteps.ts:79"
             },
             "result": {
               "status": "passed",
-              "duration": 1373708870
+              "duration": 541988012
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 36,
-            "name": "I should see 15 rows in the table",
+            "line": 41,
+            "name": "I should see a success message \"User updated successfully\"",
             "match": {
-              "location": "tests/step_definitions/testSteps.ts:66"
+              "location": "tests/step_definitions/hairstylistSteps.ts:83"
             },
             "result": {
               "status": "passed",
-              "duration": 3262534
+              "duration": 656048567
             }
           },
           {
@@ -204,24 +217,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 217695517
+              "duration": 135442037
             }
           }
         ],
         "tags": [
           {
-            "name": "@page",
-            "line": 21
+            "name": "@Edit",
+            "line": 26
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "admin",
-    "line": 2,
+    "id": "hairstylist",
+    "line": 1,
     "keyword": "Feature",
-    "name": "Admin",
+    "name": "Hairstylist",
     "tags": [],
-    "uri": "tests/features/admin.feature"
+    "uri": "tests/features/hairstylist.feature"
   }
 ]

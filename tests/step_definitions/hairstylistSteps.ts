@@ -1,6 +1,7 @@
 import { Given, When , Then } from "@cucumber/cucumber";
 import {CustomWorld} from '../support/world'
 import Hairstylistpage from "../pages/hairstylistpage";
+import { faker } from '@faker-js/faker';
 
 let  hairstylist : Hairstylistpage;
 Given('I am logged in and on the dashboard page of bahah.',{ timeout: 100000 }, async function () {
@@ -37,9 +38,15 @@ Then('I should see  a error messages',async function()
 })
 
 //edit hairstylist
+When('I upload the profile picture',async function()
+{
+  await hairstylist.uploadProfilePicture('uploads/image1.jpeg');
+})
 When('I update the "First Name" and "Last Name" field with a new value',{timeout:9000},async function()
 {
-  await hairstylist.enterInfo('mario','smith');
+   const firstName = faker.person.firstName();   // generates random first name
+   const lastName = faker.person.lastName();     // generates random last name
+  await hairstylist.enterInfo(firstName,lastName);
 })
 When('I select a different option from the "Gender" dropdown',async function()
 {

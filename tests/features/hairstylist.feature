@@ -27,6 +27,7 @@ Feature:Hairstylist
     Scenario: Edit the profile and add valid data
     When I navigate to the  "Hairstylist" tab
     And I open the menu and select "Edit"
+    And I upload the profile picture 
     And I update the "First Name" and "Last Name" field with a new value
     And I select a different option from the "Gender" dropdown
     And I update the "Date of Birth" field
