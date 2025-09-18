@@ -2,13 +2,16 @@ import { expect } from "@playwright/test";
 import { Page } from "playwright";
 export class hairstylistpage
 {
+  verifyMenuItems(arg0: string) {
+    throw new Error("Method not implemented.");
+  }
     readonly page: Page;
     readonly emailInput: ReturnType<Page['locator']>;
     readonly password: ReturnType<Page['locator']>;
     readonly loginButton: ReturnType<Page['locator']>;
     readonly dashboardHeading: ReturnType<Page['getByRole']>;
     readonly hairstylist: ReturnType<Page['locator']>;
-    readonly moreOptionsButton: ReturnType<Page['locator']>;
+    readonly menuItems: ReturnType<Page['locator']>;
     readonly editOption: ReturnType<Page['getByRole']>;
     readonly firstnamefield: ReturnType<Page['locator']>;
     readonly lastnamefield: ReturnType<Page['locator']>;
@@ -48,7 +51,8 @@ export class hairstylistpage
     readonly profile: ReturnType<Page['locator']>;
     readonly logoutButton: ReturnType<Page['locator']>;       
     readonly street: ReturnType<Page['locator']>;    
-    readonly uploadInput: ReturnType<Page['locator']>;         
+    readonly uploadInput: ReturnType<Page['locator']>;     
+      
 
 async delay(timeInMs: number) {
     return new Promise(resolve => setTimeout(resolve, timeInMs));
@@ -65,7 +69,7 @@ constructor (page:Page)
 
    //here are the locators to add new user
      this.hairstylist = page.locator('a[href="/hairdressers-beauticians/list"]');
-     this.moreOptionsButton = page.locator('//tbody/tr[1]/td[6]//button');
+     this.menuItems = page.locator('//tbody/tr[1]/td[6]//button');
      this.editOption = page.getByRole('menuitem', { name: 'Edit' });
      this.firstnamefield = page.locator('input[placeholder="Enter first name"]');
      this.lastnamefield = page.locator('input[placeholder="Enter last name"]');
@@ -149,7 +153,7 @@ constructor (page:Page)
     //click on the menuoptions
     async menuIcon()
     {
-         await this.moreOptionsButton.click();
+         await this.menuItems.click();
     }
     //click on the menuoptions
     async editbutton()
@@ -261,8 +265,7 @@ constructor (page:Page)
       await this.delay(30); // added delay time for 30 sec
     }
     //add bio in about you section
-    async addAboutYou(info:string
-    )
+    async addAboutYou(info:string)
     {
       await this.aboutyou.scrollIntoViewIfNeeded();
       await this.aboutyou.fill(''); // clear first
@@ -361,3 +364,5 @@ constructor (page:Page)
     }
 } 
 export default hairstylistpage;
+
+

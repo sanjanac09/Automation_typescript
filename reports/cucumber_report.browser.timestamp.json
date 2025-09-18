@@ -1,0 +1,133 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "hairstylist;edit-the-profile-of-hairstylist",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Edit the profile of Hairstylist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 547069778
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in and on the dashboard page of bahah.",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35177645776
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I navigate to the  \"Hairstylist\" tab",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 509960017
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I open the menuItems and verify options \"Edit\" and \"Enable/Disable\" based on current status",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select \"Edit\" option",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I clear all required fields",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:37"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click on the save changes button",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see  a error messages",
+            "match": {
+              "location": "tests/step_definitions/hairstylistSteps.ts:47"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 162416850
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validation",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "hairstylist",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Hairstylist",
+    "tags": [],
+    "uri": "tests/features/hairstylist.feature"
+  }
+]

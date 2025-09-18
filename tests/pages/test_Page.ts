@@ -16,6 +16,9 @@ export class TablePage {
      readonly headerEmail: Locator;
      readonly headerStatus: Locator;
      readonly AdminSection: Locator;
+     readonly firstStatusCell: Locator; // for status cell in the first row
+     readonly burgerMenuButton: Locator; // for burger menu button in the first row
+     readonly menuItems: Locator; // for menu items in the dropdown
 
      
     constructor(page: Page) {
@@ -38,6 +41,12 @@ export class TablePage {
     this.headerEmail = page.getByRole("columnheader", { name: "Email" });
     this.headerStatus = page.getByRole("columnheader", { name: "Status" });
     this.AdminSection= page.locator('text=Admin Users');
+  
+    // for status cell in the first row
+    this.firstStatusCell = page.locator("table tbody tr td").nth(4); 
+    // adjust nth() to match the correct index of Status column
+    this.burgerMenuButton = page.locator(".burger-menu-button").first();
+    this.menuItems = page.locator("ul[role='menu'] li");
   }
  // to get current page size
  async getCurrentPageSize(): Promise<number> {
@@ -111,6 +120,7 @@ async changePageSize(size: number) {
       expect(headerText.trim()).toContain(expectedHeaders[i]); // using contain because some headers have sort icons
     }
   }
+
  //to verify all table headers are visible
   async verifyTableHeaders() {
     await expect(this.headerFirstName).toBeVisible();
@@ -140,5 +150,24 @@ async changePageSize(size: number) {
     {
         await this.AdminSection.click();
     }
+  //menu items based on status
+    async verifyMenuItemsBasedOnStatus() {
+    const status = (await this.firstStatusCell.innerText()).trim().toLowerCase();
+
+    // Open burger menu
+    await this.burgerMenuButton.click();
+
+    // First item must always be "Edit"
+    await expect(this.menuItems.nth(0)).toHaveText("View");
+
+    // Second item depends on status
+    if (status === "active") {
+      await expect(this.menuItems.nth(1)).toHaveText("Disable");
+    } else if (status === "inactive") {
+      await expect(this.menuItems.nth(1)).toHaveText("Enable");
+    } else {
+      throw new Error(`Unexpected status value: ${status}`);
+    }
+  }
 }
 

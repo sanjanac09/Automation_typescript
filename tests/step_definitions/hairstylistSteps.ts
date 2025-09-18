@@ -15,13 +15,18 @@ When('I navigate to the  "Hairstylist" tab',async function(){
   await hairstylist.gotoHairstylistSection();
 });
 
-//check for validations while editing hairstylist
-When ('I open the menu and select "Edit"',async function()
+When ('I select "Edit" option',async function()
 {
-  await hairstylist.menuIcon();
   await hairstylist.editbutton();
 })
 
+When ('I open the menuItems and verify options "Edit" and "Enable/Disable" based on current status',async function()        
+{
+   await hairstylist.menuIcon();
+   await hairstylist.verifyMenuItems('active'); // passing status'active' or 'inactive'
+})
+
+//check for validations while editing hairstylist
  When('I clear all required fields',{ timeout: 6000 },async function()
 {
   await hairstylist.clearfields();

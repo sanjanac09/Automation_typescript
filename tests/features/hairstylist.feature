@@ -2,6 +2,7 @@ Feature:Hairstylist
 
   Background: 
     Given I am logged in and on the dashboard page of bahah.
+    
     @add
     Scenario: Add new Hairstylist
     When I navigate to the  "Hairstylist" tab
