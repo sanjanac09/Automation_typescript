@@ -70,3 +70,28 @@ page.on('dialog', async dialog => {
   await page.waitForTimeout(3000);
 //  
 });
+
+test('dashboard verify', async ({ page }) => {
+    await page.goto('https://stage-cms.bahah.com.au/login');
+
+});
+// await page.getByRole('heading', { name: 'Dashboard' }).click();
+// await page.locator('.icon-holder > svg').click();
+// await page.getByLabel('', { exact: true }).click();
+// await page.locator('#menu- div').first().click();
+// await page.locator('#menu- div').first().click();
+// await page.getByRole('heading', { name: 'Hairdressers/Beauticians' }).click();
+// await page.getByRole('heading', { name: 'Services booked' }).click();
+// await page.getByRole('button', { name: 'Sort' }).click();
+// await page.locator('#sort-customized-menu div').first().click();
+// await page.locator('div').filter({ hasText: /^\$6368\.25Revenue generated\$2396\.737% Commision$/ }).nth(1).click();
+// await page.getByText('$6368.25').click();
+// await page.locator('div').filter({ hasText: /^\$6368\.25Revenue generated\$2396\.737% Commision$/ }).nth(1).click();
+// await page.locator('div').filter({ hasText: /^\$6368\.25Revenue generated\$2396\.737% Commision$/ }).nth(1).click();
+// await page.locator('div').filter({ hasText: /^\$6368\.25Revenue generated\$2396\.737% Commision$/ }).nth(1).click();
+// await page.getByText('Total: 112').click();
+// await page.getByRole('link', { name: '+108 more' }).click();
+// await page.goto('https://stage-cms.bahah.com.au/dashboard');
+// await page.getByRole('heading', { name: 'Customers', exact: true }).click();
+// await page.getByText('Total: 169').click();
+// await page.getByText('Services bookedSort').click();

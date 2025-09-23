@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import { LoginPage } from "../pages/loginPage";
-import { CustomWorld } from "../support/world";
+import { LoginPage } from "../pages/loginPage.js";
+import { CustomWorld } from "../support/world.js";
 
 let loginPage: LoginPage;
 
@@ -73,4 +73,18 @@ When("I enter wrong password", async function () {
 
 Then("I should see the error message for wrong password",{ timeout: 20000 }, async function () {
  await expect(loginPage.errormessage.first()).toBeVisible();
+});
+
+// Dashboard feature background steps
+Given("I am on the login page", { timeout: 7000 }, async function (this: CustomWorld) {
+  loginPage = new LoginPage(this.page);
+  await loginPage.navigate();
+});
+
+When("I login with valid credentials", async function () {
+  await loginPage.login("gorakh@ebpearls.com.au", "Password@1");
+});
+
+Then("I should be redirected to the dashboard", async function () {
+  await expect(loginPage.dashboardHeading).toBeVisible();
 });

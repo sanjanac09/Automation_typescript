@@ -4,105 +4,43 @@
     "elements": [
       {
         "description": "",
-        "id": "hairstylist;edit-the-profile-of-hairstylist",
+        "id": "dashboard-page-verification;verify-summary-cards",
         "keyword": "Scenario",
-        "line": 19,
-        "name": "Edit the profile of Hairstylist",
+        "line": 7,
+        "name": "Verify summary cards",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 547069778
+              "duration": 3517643500
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I am logged in and on the dashboard page of bahah.",
+            "name": "I am logged in and on the dashboard page of bahah",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:7"
+              "location": "file:\\D:\\Automation\\Automation_typescript\\tests\\step_definitions\\testSteps.ts:3"
             },
             "result": {
               "status": "passed",
-              "duration": 35177645776
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 20,
-            "name": "I navigate to the  \"Hairstylist\" tab",
-            "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 509960017
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
-            "name": "I open the menuItems and verify options \"Edit\" and \"Enable/Disable\" based on current status",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I select \"Edit\" option",
-            "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:24"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 23,
-            "name": "I clear all required fields",
-            "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:37"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "I click on the save changes button",
-            "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:42"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "duration": 7231384999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
-            "name": "I should see  a error messages",
+            "line": 8,
+            "name": "I should see all summary cards on dashboard",
             "match": {
-              "location": "tests/step_definitions/hairstylistSteps.ts:47"
+              "location": "file:\\D:\\Automation\\Automation_typescript\\tests\\step_definitions\\dashboardSteps.ts:12"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 106296299
             }
           },
           {
@@ -110,24 +48,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 162416850
+              "duration": 1420479100
             }
           }
         ],
         "tags": [
           {
-            "name": "@validation",
-            "line": 18
+            "name": "@dashboard",
+            "line": 6
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "hairstylist",
+    "id": "dashboard-page-verification",
     "line": 1,
     "keyword": "Feature",
-    "name": "Hairstylist",
+    "name": "Dashboard Page Verification",
     "tags": [],
-    "uri": "tests/features/hairstylist.feature"
+    "uri": "tests\\features\\dashboard.feature"
   }
 ]

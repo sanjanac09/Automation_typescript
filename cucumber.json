@@ -1,8 +1,7 @@
-
 {
   "default": {
-    "requireModule": ["ts-node/register"],
-    "require": [
+    "loader": ["ts-node/esm"],
+    "import": [
       "tests/support/world.ts",
       "tests/support/hooks.ts",
       "tests/step_definitions/*.ts"

@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { CustomWorld } from "../support/world";
+import { CustomWorld } from "../support/world.js";
 import { expect } from "@playwright/test";
 
 Given(

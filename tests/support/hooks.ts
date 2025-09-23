@@ -1,11 +1,7 @@
-import { Before, After, AfterAll, AfterStep, Status } from "@cucumber/cucumber";
-import { CustomWorld } from "./world";
-import { chromium, Browser } from "playwright";
-
-let browser: Browser;
+import { Before, After, AfterStep, Status } from "@cucumber/cucumber";
+import { CustomWorld } from "./world.js";
 
 Before(async function (this: CustomWorld) {
-  browser = await chromium.launch();
   await this.init();
 });
 
@@ -18,10 +14,4 @@ AfterStep(async function (this: CustomWorld, step) {
 
 After(async function (this: CustomWorld) {
   await this.cleanup();
-});
-
-AfterAll(async function () {
-  if (browser) {
-    await browser.close();
-  }
 });

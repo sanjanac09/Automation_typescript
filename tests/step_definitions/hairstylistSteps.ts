@@ -1,11 +1,11 @@
 import { Given, When , Then } from "@cucumber/cucumber";
-import {CustomWorld} from '../support/world'
-import Hairstylistpage from "../pages/hairstylistpage";
+import {CustomWorld} from '../support/world.js'
+import hairstylistpage from "../pages/hairstylistpage.js";
 import { faker } from '@faker-js/faker';
 
-let  hairstylist : Hairstylistpage;
+let  hairstylist : hairstylistpage;
 Given('I am logged in and on the dashboard page of bahah.',{ timeout: 100000 }, async function () {
-  hairstylist = new Hairstylistpage(this.page); //  get the page object correctly
+  hairstylist = new hairstylistpage(this.page); //  get the page object correctly
   await hairstylist.gotoLoginPage();
   await hairstylist.enterInput('gorakh@ebpearls.com.au','Password@1');
   await hairstylist.dashboard();
@@ -17,6 +17,11 @@ When('I navigate to the  "Hairstylist" tab',async function(){
 
 When ('I select "Edit" option',async function()
 {
+  await hairstylist.editbutton();
+})
+
+When('I open the menu and select "Edit"', async function() {
+  await hairstylist.menuIcon();
   await hairstylist.editbutton();
 })
 
@@ -43,7 +48,7 @@ Then('I should see  a error messages',async function()
 })
 
 //edit hairstylist
-When('I upload the profile picture',async function()
+When('I upload the profile picture',{timeout:6000},async function()
 {
   await hairstylist.uploadProfilePicture('uploads/image1.jpeg');
 })
@@ -144,3 +149,4 @@ When ('I select a status from the "Status" dropdown',async function ()
 {
   await hairstylist.clickStatus('active');
 });
+
