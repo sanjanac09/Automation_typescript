@@ -7,7 +7,7 @@ let  hairstylist : hairstylistpage;
 Given('I am already logged in and on the dashboard page of bahah',{ timeout: 100000 }, async function () {
   hairstylist = new hairstylistpage(this.page); //  get the page object correctly
   await hairstylist.gotoLoginPage();
-  await hairstylist.enterInput('gorakh@ebpearls.com.au','Password@1');
+  await hairstylist.enterInput('sanjana.chaudhary@ebpearls.com','Password@1');
   await hairstylist.dashboard();
 });
 

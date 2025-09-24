@@ -7,7 +7,7 @@ Given(
   { timeout: 100000 },
   async function (this: CustomWorld) {
     await this.adminPage.gotoLoginPage();
-    await this.adminPage.email("gorakh@ebpearls.com.au");
+    await this.adminPage.email("sanjana.chaudhary@ebpearls.com");
     await this.adminPage.enterPassword("Password@1");
     await this.adminPage.SignInNow();
     await this.adminPage.dashboard();
